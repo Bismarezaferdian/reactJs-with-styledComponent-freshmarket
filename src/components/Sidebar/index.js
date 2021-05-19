@@ -22,7 +22,7 @@ const Sidebar = ({ togle, isOpen }) => {
           <SidebarLinks
             smooth={true}
             duration={800}
-            offset={79}
+            offset={-30}
             onClick={togle}
             to="home"
           >
@@ -31,7 +31,7 @@ const Sidebar = ({ togle, isOpen }) => {
           <SidebarLinks
             smooth={true}
             duration={800}
-            offset={60}
+            offset={-30}
             onClick={togle}
             to="about"
           >
@@ -42,7 +42,7 @@ const Sidebar = ({ togle, isOpen }) => {
           <SidebarLinks
             smooth={true}
             duration={800}
-            offset={60}
+            offset={-30}
             onClick={togle}
             spy={true}
             to="mitra"
@@ -52,7 +52,7 @@ const Sidebar = ({ togle, isOpen }) => {
           <SidebarLinks
             smooth={true}
             duration={800}
-            offset={60}
+            offset={180}
             onClick={togle}
             to="product"
           >

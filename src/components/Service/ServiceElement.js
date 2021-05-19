@@ -6,8 +6,8 @@ export const ServiceContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #000;
-  /* background: ${({ bgColor }) => (bgColor ? "#0000" : "#fff ")}; */
+  /* background: #f9f9f9; */
+  background: ${({ bgColor }) => (bgColor ? "#f9f9f9" : "#f9f9f9 ")};
 
   @media screen and (max-width: 768px) {
     height: 1200px;
@@ -22,9 +22,10 @@ export const ServiceWrapp = styled.div`
   max-width: 1000px;
   display: grid;
   margin: 0 auto;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  grid-gap: 16px;
+  justify-content: center;
+  grid-gap: 56px;
   padding: 0 80px;
 
   @media screen and (max-width: 1000px) {
@@ -41,15 +42,20 @@ export const ServiceWrapp = styled.div`
 
 export const ServiceCard = styled.div`
   display: flex;
-  background: #fff;
-  justify-content: flex-start;
+  background: #f9f9f9;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
   max-height: 340px;
   min-height: 300px;
   padding: 30px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d3e0ea;
+  box-shadow: 0 0.4px 5.2px -2px rgba(0, 0, 0, 0.031),
+    0 1px 21.8px -2px rgba(0, 0, 0, 0.044),
+    0 1.9px 51.2px -2px rgba(0, 0, 0, 0.055),
+    0 3.4px 71.6px -2px rgba(0, 0, 0, 0.066),
+    0 6.3px 80px -2px rgba(0, 0, 0, 0.079), 0 15px 82px -2px rgba(0, 0, 0, 0.11);
   transition: all 0.2s ease-in-out;
 
   @media screen and (max-width: 676px) {
@@ -58,23 +64,23 @@ export const ServiceCard = styled.div`
     padding: 0 auto;
   }
 
-  &:hover {
+  /* &:hover {
     transform: scale(1.08);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-  }
+  } */
 `;
 
 export const ServiceIcon = styled.img`
-  height: 80px;
-  width: 80px;
+  height: 280px;
+  width: 280px;
   margin-bottom: 34px;
 `;
 
 export const ServiceH1 = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 64px;
-  color: #fff;
+  color: #000;
 
   @media screen and (max-width: 500px) {
     font-size: 2rem;
@@ -86,11 +92,9 @@ export const ServiceH1 = styled.h1`
     margin-top: 100px;
   }
 `;
-export const ServiceTitle = styled.div`
+
+export const ServiceTitle = styled.p`
   font-size: 1rem;
   margin-bottom: 10px;
-`;
-export const ServiceDesc = styled.p`
-  font-size: 0.8rem;
-  text-align: center;
+  font-weight: 700;
 `;

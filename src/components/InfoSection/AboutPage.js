@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Bounce from "react-reveal/Bounce";
-import Hero from "../../images/hero.svg";
+import About from "../../images/about-jahe.png";
 import {
   InfoContainer,
   InfoWrapper,
@@ -19,7 +19,7 @@ import {
   BtnLink,
 } from "./InfoElement";
 
-const InfoSection = () => {
+const AboutPage = () => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -28,17 +28,20 @@ const InfoSection = () => {
 
   return (
     <>
-      <InfoContainer id="home" lightBg={true}>
+      <InfoContainer id="about" lightBg={true}>
         <InfoWrapper>
-          <InfoRow imgStart={false}>
+          <InfoRow imgStart={true}>
             <Column1>
-              <Bounce top delay={600}>
+              <Bounce bottom delay={900}>
                 <TextWrapper>
-                  <TopLine>Belanja mudah kapan saja</TopLine>
-                  <Heading lightText={false}>Gratis Ongkir !!!</Heading>
+                  <TopLine>what about gendis ayu jahe</TopLine>
+                  <Heading lightText={false}>
+                    serbuk minuman terbuat dari jahe merah asli dan
+                    rempah-rempah{" "}
+                  </Heading>
                   <Subtitle darkText={true}>
-                    Dengan belanja min 100 rb, kami siap antar kerumah anda
-                    tanpa tambahan biaya
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat numquam non totam dolor id itaque.
                   </Subtitle>
                   <BtnWrap>
                     <BtnLink
@@ -46,7 +49,7 @@ const InfoSection = () => {
                       onMouseLeave={onHover}
                       to="/signUp"
                     >
-                      Daftar Sekarang{" "}
+                      Our story
                       {hover ? <ArrowForward /> : <ArrowRight />}
                     </BtnLink>
                   </BtnWrap>
@@ -56,7 +59,7 @@ const InfoSection = () => {
             <Column2>
               <ImgWrap>
                 <Bounce bottom delay={200}>
-                  <Img src={Hero} />
+                  <Img src={About} />
                 </Bounce>
               </ImgWrap>
             </Column2>
@@ -67,4 +70,4 @@ const InfoSection = () => {
   );
 };
 
-export default InfoSection;
+export default AboutPage;

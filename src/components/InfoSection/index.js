@@ -37,7 +37,7 @@ const InfoSection = ({
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
-              <Bounce top delay={600}>
+              <Bounce bottom delay={600}>
                 <TextWrapper>
                   <TopLine>{topLine}</TopLine>
                   <Heading lightText={lightText}>{headLine}</Heading>

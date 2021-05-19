@@ -38,7 +38,7 @@ const Navbar = ({ togle }) => {
       <Nav navscroll={navscroll}>
         <NavbarContainer>
           <NavLogo to="/" onClick={togleHome}>
-            Fresh Mart
+            Gendis Ayu Jahe
           </NavLogo>
           <MobileIcon onClick={togle} navscroll={navscroll}>
             <FaBars />
@@ -51,7 +51,7 @@ const Navbar = ({ togle }) => {
                   to={item.link}
                   smooth={true}
                   duration={800}
-                  offset={30}
+                  offset={-20}
                   spy={true}
                 >
                   {" "}

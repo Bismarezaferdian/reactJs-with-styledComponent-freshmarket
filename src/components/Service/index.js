@@ -1,7 +1,6 @@
 import React from "react";
-import Sayur from "../../images/sayur.svg";
-import Daging from "../../images/daging.svg";
-import Beras from "../../images/beras.svg";
+import RedCover from "../../images/kemasan-merah.png";
+import GrenCover from "../../images/kemasan-hijau.png";
 import Bounce from "react-reveal/Bounce";
 
 import {
@@ -11,43 +10,23 @@ import {
   ServiceH1,
   ServiceIcon,
   ServiceTitle,
-  ServiceDesc,
 } from "./ServiceElement";
 
 const service = () => {
   return (
-    <ServiceContainer id="product">
+    <ServiceContainer bgColor={false} id="product">
       <ServiceH1>Products</ServiceH1>
       <ServiceWrapp>
         <Bounce left delay={900}>
           <ServiceCard>
-            <ServiceIcon src={Sayur} />
-            <ServiceTitle>Sayuran & Buah</ServiceTitle>
-            <ServiceDesc>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-              beatae? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Maiores, fuga.
-            </ServiceDesc>
+            <ServiceIcon src={RedCover} />
+            <ServiceTitle>Gula Merah</ServiceTitle>
           </ServiceCard>
         </Bounce>
         <Bounce left delay={600}>
           <ServiceCard>
-            <ServiceIcon src={Daging} />
-            <ServiceTitle>Daging</ServiceTitle>
-            <ServiceDesc>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-              beatae?
-            </ServiceDesc>
-          </ServiceCard>
-        </Bounce>
-        <Bounce left delay={100}>
-          <ServiceCard>
-            <ServiceIcon src={Beras} />
-            <ServiceTitle>Sembako</ServiceTitle>
-            <ServiceDesc>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
-              beatae?
-            </ServiceDesc>
+            <ServiceIcon src={GrenCover} />
+            <ServiceTitle>Gula Aren</ServiceTitle>
           </ServiceCard>
         </Bounce>
       </ServiceWrapp>

@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import HeroPage from "../components/InfoSection/HeroPage";
 import Sidebar from "../components/Sidebar";
-// import HeroSection from "../components/HeroSection";
 import InfoSection from "../components/InfoSection";
-import {
-  homeObjOne,
-  homeObjTwo,
-  // homeObj,
-  homeObjThree,
-} from "../components/InfoSection/Data";
 import Service from "../components/Service";
 import Footer from "../components/Footer";
+import Komposisi from "../components/Komposisi";
+import Slider from "../components/ImageSlider";
+import Kontak from "../components/Kontak";
+import {
+  homeObj,
+  homeObjOne,
+  homeObjTwo,
+  homeObjThree,
+  productOne,
+  productTwo,
+} from "../components/InfoSection/Data";
+import AboutPage from "../components/InfoSection/AboutPage";
+import kontak from "../components/Kontak";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,13 +29,18 @@ const Home = () => {
     <>
       <Sidebar isOpen={isOpen} togle={togle} />
       <Navbar togle={togle} />
-      {/* <HeroSection /> */}
-      <HeroPage />
-      {/* <InfoSection {...homeObj} /> */}
-      <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObj} />
+      {/* <InfoSection {...homeObjOne} /> */}
+      <AboutPage />
+      <Komposisi />
       <InfoSection {...homeObjTwo} />
       <Service />
-      <InfoSection {...homeObjThree} />
+      <InfoSection {...productOne} />
+      <InfoSection {...productTwo} />
+      <Slider />
+      <Kontak />
+
+      {/* <InfoSection {...homeObjThree} /> */}
       <Footer />
     </>
   );

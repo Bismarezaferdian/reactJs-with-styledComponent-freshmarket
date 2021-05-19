@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
+import { MdLocationOn, MdCall, MdMail } from "react-icons/md";
 
 export const InfoContainer = styled.div`
-  color: #fff;
   background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "f4f9f9")};
 
   @media screen and (max-width: 768px) {
@@ -25,10 +24,11 @@ export const InfoWrapper = styled.div`
 
 export const InfoRow = styled.div`
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-auto-columns: minmax(auto, 1fr);
   margin-top: 48px;
   margin-bottom: 48px;
-  align-items: center;
   grid-template-areas: "col1 col2";
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `"col2 col1"` : `"col1 col2" `};
@@ -40,24 +40,28 @@ export const InfoRow = styled.div`
 `;
 
 export const Column1 = styled.div`
-  /* background: red; */
   margin-bottom: 10px;
   text-align: start;
+  align-items: center;
   padding: 0 15px;
   grid-area: col1;
+  background: #fff;
 `;
 
 export const Column2 = styled.div`
   margin: 10px 0;
   padding: 0 10px;
   grid-area: col2;
+  align-items: center;
 `;
 
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 50px;
-  /* padding-bottom: 30px; */
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
 `;
 
 export const TopLine = styled.p`
@@ -96,6 +100,8 @@ export const ImgWrap = styled.div`
   max-width: 450px;
   margin-top: 0px;
   height: 100%;
+  display: flex;
+  align-items: center;
 `;
 
 export const Img = styled.img`
@@ -106,44 +112,74 @@ export const Img = styled.img`
   filter: drop-shadow(0 10px 10px #a2b29f);
 `;
 
-export const BtnWrap = styled.div`
-  display: flex;
-  text-align: center;
+export const KontenWrapp = styled.p`
+  max-width: 440px;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 24px;
 `;
 
-export const BtnLink = styled(Link)`
-  background: #cf0000;
-  border-radius: 50px;
-  padding: 10px 22px;
-  color: #010606;
-  font-size: 16px;
-  align-items: center;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 0px 8px rgba(222, 226, 221);
-
-  &:hover {
-    background: #1cfd7b;
-    color: #7a7a7a;
-    transition: 0.2s ease-in-out;
-    transform: translateX(2px);
-  }
-`;
-
-export const ArrowForward = styled(MdArrowForward)`
-  font-size: 20px;
-  margin-left: 8px;
+export const Location = styled(MdLocationOn)`
+  font-size: 24px;
+  margin-right: 8px;
   transition: all 0.2 ease-in-out;
 `;
 
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  font-size: 20px;
-  margin-left: 8px;
+export const Call = styled(MdCall)`
+  font-size: 24px;
+  margin-right: 8px;
   transition: all 0.2 ease-in-out;
 `;
+export const Mail = styled(MdMail)`
+  font-size: 24px;
+  margin-right: 8px;
+  transition: all 0.2 ease-in-out;
+`;
+
+export const Medsos = styled.div`
+  /* font-size: 32px; */
+  /* margin: 6px; */
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+export const SocialIconLinks = styled.a`
+  color: #1b1a17;
+  font-size: 24px;
+`;
+
+export const TitleKontak = styled.h1`
+  color: #1b1a17;
+  font-size: 28px;
+  margin-bottom: 40px;
+`;
+
+// export const BtnLink = styled(Link)`
+//   background: #cf0000;
+//   border-radius: 50px;
+//   padding: 10px 22px;
+//   color: #010606;
+//   font-size: 16px;
+//   align-items: center;
+//   outline: none;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//   white-space: nowrap;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   box-shadow: 3px 0px 8px rgba(222, 226, 221);
+
+//   &:hover {
+//     background: #1cfd7b;
+//     color: #7a7a7a;
+//     transition: 0.2s ease-in-out;
+//     transform: translateX(2px);
+//   }
+// `;
